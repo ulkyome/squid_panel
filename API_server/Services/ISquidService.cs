@@ -1,4 +1,3 @@
-// Services/ISquidService.cs
 using SquidManagerAPI.Models;
 
 namespace SquidManagerAPI.Services
@@ -16,18 +15,5 @@ namespace SquidManagerAPI.Services
         Task<List<string>> GetCacheLogsAsync(int lines = 100);
         Task<SystemInfo> GetSystemInfoAsync();
         Task<string> TestConfigAsync();
-    }
-
-    public interface ISquidGuardService
-    {
-        Task<bool> UpdateBlacklistAsync(Blacklist blacklist);
-        Task<bool> RemoveFromBlacklistAsync(string category, string domain);
-        Task<List<Blacklist>> GetBlacklistsAsync();
-        Task<bool> ReloadSquidGuardAsync();
-        Task<List<AccessRule>> GetAccessRulesAsync();
-        Task<bool> AddAccessRuleAsync(AccessRule rule);
-        Task<bool> RemoveAccessRuleAsync(int ruleId);
-        Task<bool> CompileBlacklistsAsync();
-        Task<List<string>> GetSquidGuardLogsAsync(int lines = 100);
     }
 }

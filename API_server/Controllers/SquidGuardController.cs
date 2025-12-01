@@ -115,7 +115,7 @@ namespace SquidManagerAPI.Controllers
         /// Добавить правило доступа
         /// </summary>
         [HttpPost("rules")]
-        public async Task<ActionResult> AddAccessRule([FromBody] AccessRule rule)
+        public async Task<ActionResult> AddAccessRule([FromBody] AccessRuleSquidGuard rule)
         {
             try
             {
